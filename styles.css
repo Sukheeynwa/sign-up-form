@@ -1,0 +1,181 @@
+* {
+	font-family: poppins;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	appearance: none;
+}
+
+body {
+	background-color: #5C62D4;
+}
+
+#container-main {
+	display: flex;
+}
+
+#sidebar {
+	flex: 0.7;
+	display: flex;
+	position: relative;
+}
+
+#image-background {
+	height: 420px;
+	margin: auto;
+	margin-top: 150px;
+}
+
+#image-logo {
+	height: 80px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+#image-logo + span::after {
+	content: "SUKHEE";
+	font-size: 28px;
+	font-weight: 900;
+	color: white;
+	position: absolute;
+	left: 90px;
+	top: 40px;
+}
+
+#container {
+	background-color: #F3F6FF;
+	flex: 1;
+	height: 100vh;
+	padding: 40px 80px;
+}
+
+h1 {
+	padding-bottom: 6px;
+}
+
+fieldset {
+	background-color: white;
+	border: none;
+	border-radius: 20px;
+	padding: 20px 40px;
+	padding-bottom: 60px;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 30px;
+}
+
+fieldset > div {
+	display: flex;
+	justify-content: space-between;
+	padding: 20px;
+}
+
+#container div p {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	gap: 8px;
+}
+
+input {
+	height: 36px;
+	padding: 8px;
+	border-radius: 8px;
+	border: solid 2px;
+	border-color: black;
+	background-color: rgba(0, 0, 0, 0.02);
+}
+
+input:focus {
+	background-color: rgba(0, 0, 0, 0.05);
+	border-color: #5C62D4;
+}
+
+label {
+	font-weight: 700;
+}
+
+button {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	color: white;
+	background-color: #5C62D4;
+	font-weight: 700;
+	font-size: 16px;
+	padding: 10px 16px;
+	border: none;
+	border-radius: 8px;
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+	scale: 110%;
+	transition: 3;
+}
+
+button:active {
+	scale: 90%;
+	transition: 3;
+}
+
+input:required {
+	height: 36px;
+	padding: 8px;
+	border-radius: 8px;
+	border: solid 2px;
+}
+
+input:invalid {
+	border-color: red;
+}
+
+input[id="email"]:invalid + span::after {
+	content:"*Please provide a valid email";
+	position: absolute;
+	font-size: 12px;
+	color: red;
+}
+
+input[id="phone-number"]:invalid + span::after {
+	content:"*Please enter a valid number";
+	position: absolute;
+	font-size: 12px;
+	color: red;
+}
+
+input[id="password"]:invalid + span::after {
+	content:"Password requires minimum 8 charecters";
+	position: absolute;
+	font-size: 12px;
+	color: red;
+}
+
+input[id="confirm-password"]:invalid + span::after {
+	content:"*Password did not match";
+	position: absolute;
+	font-size: 12px;
+	color: red;
+}
+
+input:valid {
+	border-color: #353cc0;
+	background-color: #5C62D4;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+	color: #5C62D4;
+	font-weight: 600;
+}
+
+a:visited {
+	color: #5C62D4;
+	font-weight: 600;
+
+}
