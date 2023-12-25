@@ -94,6 +94,7 @@ input {
 input:focus {
 	background-color: rgba(0, 0, 0, 0.05);
 	border-color: #5C62D4;
+	transition: 1s;
 }
 
 label {
@@ -115,12 +116,12 @@ button {
 
 button:hover {
 	scale: 110%;
-	transition: 3;
+	transition: 0.2s;
 }
 
 button:active {
-	scale: 90%;
-	transition: 3;
+	scale: 80%;
+	transition: 0.5s;
 }
 
 input:required {
@@ -128,11 +129,22 @@ input:required {
 	padding: 8px;
 	border-radius: 8px;
 	border: solid 2px;
+	border-color: black;
+	transition: 1s;
+}
+
+
+input:valid {
+	border-color: #353cc0;
+	background-color: #5C62D4;
+	color: white;
+	transition: 1s;
 }
 
 input:invalid {
 	border-color: red;
 	background-color: rgba(0, 0, 0, 0.02);
+	transition: 1s;
 }
 
 input[id="email"]:invalid + span::after {
@@ -140,6 +152,7 @@ input[id="email"]:invalid + span::after {
 	position: absolute;
 	font-size: 12px;
 	color: red;
+	transition: 1s;
 }
 
 input[id="phone-number"]:invalid + span::after {
@@ -147,6 +160,7 @@ input[id="phone-number"]:invalid + span::after {
 	position: absolute;
 	font-size: 12px;
 	color: red;
+	transition: 1s;
 }
 
 input[id="password"]:invalid + span::after {
@@ -154,6 +168,7 @@ input[id="password"]:invalid + span::after {
 	position: absolute;
 	font-size: 12px;
 	color: red;
+	transition: 1s;
 }
 
 input[id="confirm-password"]:invalid + span::after {
@@ -161,12 +176,7 @@ input[id="confirm-password"]:invalid + span::after {
 	position: absolute;
 	font-size: 12px;
 	color: red;
-}
-
-input:valid {
-	border-color: #353cc0;
-	background-color: #5C62D4;
-	color: white;
+	transition: 1s;
 }
 
 a {
@@ -178,5 +188,4 @@ a {
 a:visited {
 	color: #5C62D4;
 	font-weight: 600;
-
 }
